@@ -112,11 +112,11 @@ REST_FRAMEWORK = {
     ],
 }
 
-# CORS settings
+# CORS settings - Update with your actual frontend URL
 CORS_ALLOWED_ORIGINS = [
     "https://majestic-torrone-f69df2.netlify.app",
     "http://localhost:3000",
-    "https://your-frontend-url.netlify.app",  # Update this with your actual frontend URL
+    "https://*.netlify.app",
 ]
 
 CORS_ALLOW_CREDENTIALS = True

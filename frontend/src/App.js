@@ -29,7 +29,7 @@ ChartJS.register(
 
 const API_BASE_URL = process.env.REACT_APP_API_URL || 
   (process.env.NODE_ENV === 'production' 
-    ? 'https://chemical-equipment-backend.onrender.com/api'
+    ? 'https://YOUR_BACKEND_URL.onrender.com/api'  // Replace with your actual backend URL
     : 'http://localhost:8000/api');
 
 function App() {
