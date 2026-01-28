@@ -1,95 +1,144 @@
 # Chemical Equipment Parameter Visualizer
 
-A hybrid web and desktop application for visualizing and analyzing chemical equipment data from CSV files. The application consists of a Django REST API backend, a React web frontend, and a PyQt5 desktop frontend.
+A comprehensive web and desktop application for visualizing and analyzing chemical equipment data from CSV files. Features a modern chemical-themed interface with automatic data analysis, interactive charts, and PDF reporting capabilities.
 
-## Features
+## 🚀 Live Demo
 
-- **CSV Upload**: Upload CSV files containing chemical equipment data via web or desktop interface
-- **Data Analysis**: Automatic calculation of summary statistics (total count, averages, type distribution)
-- **Data Visualization**: Interactive charts using Chart.js (web) and Matplotlib (desktop)
-- **History Management**: Stores and displays the last 5 uploaded datasets
-- **PDF Reports**: Generate and download PDF reports for any dataset
-- **Basic Authentication**: Secure access with username/password authentication
-- **Data Tables**: View full equipment data in tabular format
+**Web Application**: [Deployed Live Demo Link](https://your-app-url.com) *(Coming Soon)*
 
-## Tech Stack
+**Desktop Application**: Download executable from [Releases](https://github.com/yourusername/chemical-equipment-visualizer/releases) *(Coming Soon)*
 
-### Backend
+## 📺 Demo Video
+
+[![Watch Demo Video](https://img.youtube.com/vi/your-video-id/0.jpg)](https://www.youtube.com/watch?v=your-video-id)
+
+*Click the image above to watch a 2-3 minute demo video* *(Video Coming Soon)*
+
+## ✨ Features
+
+### 🎨 Modern Interface
+- **Chemical-themed login page** with animated background elements
+- **Glass-morphism design** with subtle green glow effects
+- **Responsive layout** that works on all devices
+- **Professional UI** with smooth transitions and hover effects
+
+### 📊 Data Analysis & Visualization
+- **Automatic CSV processing** with intelligent data parsing
+- **Real-time statistics** (total count, averages, type distribution)
+- **Interactive charts** using Chart.js:
+  - Pie chart for equipment type distribution
+  - Bar chart for average parameter values
+- **Full data tables** with sortable columns
+- **Upload history** tracking last 5 datasets
+
+### 📄 Reporting & Export
+- **PDF report generation** with comprehensive data summary
+- **Downloadable reports** including charts and statistics
+- **Data export** capabilities for further analysis
+
+### 🔐 Security & Authentication
+- **Secure login system** with username/password authentication
+- **Session management** for both web and desktop applications
+- **Protected API endpoints** with Django REST Framework
+
+### 💻 Multi-Platform Support
+- **Web application** (React + Django)
+- **Desktop application** (PyQt5)
+- **Cross-platform compatibility** (Windows, macOS, Linux)
+
+## 🛠 Tech Stack
+
+### 🖥 Backend
 - **Django 4.2.7**: Web framework
 - **Django REST Framework**: API development
 - **Pandas**: CSV parsing and data analysis
 - **SQLite**: Database for storing dataset metadata
 - **ReportLab**: PDF report generation
 
-### Web Frontend
+### 🌐 Web Frontend
 - **React 18.2.0**: UI framework
 - **Chart.js**: Data visualization
 - **Axios**: HTTP client
+- **CSS3**: Modern styling with animations
 
-### Desktop Frontend
+### 🖱 Desktop Frontend
 - **PyQt5**: Desktop GUI framework
 - **Matplotlib**: Data visualization
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 FOSSEE/
-├── backend/                    # Django backend
+├── backend/                    # Django backend API
 │   ├── chemical_equipment/     # Django project settings
 │   ├── equipment/              # Main app with models, views, serializers
-│   ├── manage.py
-│   ├── requirements.txt
-│   └── media/                  # Uploaded CSV files (created automatically)
+│   ├── manage.py              # Django management script
+│   ├── requirements.txt      # Python dependencies
+│   └── media/                  # Uploaded CSV files (auto-created)
 ├── frontend/                   # React web application
-│   ├── public/
+│   ├── public/                # Static assets
 │   ├── src/
-│   │   ├── App.js
-│   │   ├── index.js
-│   │   └── index.css
-│   └── package.json
+│   │   ├── App.js            # Main React component
+│   │   ├── index.js          # React entry point
+│   │   └── index.css         # Styling with chemical theme
+│   └── package.json          # Node.js dependencies
 ├── desktop/                    # PyQt5 desktop application
-│   ├── main.py
-│   └── requirements.txt
-├── sample_equipment_data.csv   # Sample CSV file for testing
-└── README.md
+│   ├── main.py               # Desktop app main file
+│   └── requirements.txt      # Python dependencies
+├── sample_equipment_data.csv  # Sample CSV file for testing
+├── setup.sh                  # Linux/macOS setup script
+├── setup.bat                 # Windows setup script
+└── README.md                 # This file
 ```
 
-## Prerequisites
+## 🚀 Quick Start
 
-- Python 3.8 or higher
-- Node.js 14 or higher and npm
-- Git
+### 🎬 One-Click Setup
 
-## Quick Start - Running the Application
+**For Linux/macOS:**
+```bash
+chmod +x setup.sh
+./setup.sh
+```
 
-To run the complete application, you need to open 3 separate terminals and execute the following commands:
+**For Windows:**
+```bash
+setup.bat
+```
 
-### Terminal 1: Backend Server (Django)
+### 📋 Prerequisites
+
+- **Python 3.8+** - [Download Python](https://www.python.org/downloads/)
+- **Node.js 14+ & npm** - [Download Node.js](https://nodejs.org/)
+- **Git** - [Download Git](https://git-scm.com/downloads)
+
+### 🖥️ Manual Setup (3 Terminals Required)
+
+#### **Terminal 1: Backend Server** 🐍
 ```bash
 # Navigate to backend directory
 cd backend
 
-# Create and activate virtual environment (if not already done)
+# Create and activate virtual environment
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Run database migrations (first time only)
+# Setup database (first time only)
 python manage.py makemigrations
 python manage.py migrate
 
-# Create superuser (first time only)
+# Create admin user (first time only)
 python manage.py createsuperuser
 
-# Start the Django development server
+# Start Django server
 python manage.py runserver
 ```
+📍 **Backend API**: `http://localhost:8000`
 
-The backend API will be available at `http://localhost:8000`
-
-### Terminal 2: Web Frontend (React)
+#### **Terminal 2: Web Frontend** 🌐
 ```bash
 # Navigate to frontend directory
 cd frontend
@@ -97,35 +146,33 @@ cd frontend
 # Install dependencies (first time only)
 npm install
 
-# Start the React development server
+# Start React development server
 npm start
 ```
+📍 **Web App**: `http://localhost:3000`
 
-The web application will be available at `http://localhost:3000`
-
-### Terminal 3: Desktop Application (PyQt5)
+#### **Terminal 3: Desktop Application** 🖱️
 ```bash
 # Navigate to desktop directory
 cd desktop
 
-# Create and activate virtual environment (if not already done)
+# Create and activate virtual environment
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies (first time only)
 pip install -r requirements.txt
 
-# Run the desktop application
+# Run desktop application
 python main.py
 ```
+📍 **Desktop App**: Opens in new window
 
-The desktop application will open in a new window.
-
-### Important Notes:
-- **Terminal 1 must be running first** - the desktop and web applications depend on the backend API
-- Use the same superuser credentials for both web and desktop login
-- All three terminals should remain open while using the application
-- The sample CSV file `sample_equipment_data.csv` is available in the root directory for testing
+### ⚠️ Important Notes
+- **Start Terminal 1 first** - other apps depend on the backend API
+- Use the **same admin credentials** for both web and desktop login
+- Keep **all 3 terminals open** while using the application
+- Use `sample_equipment_data.csv` in the root directory for testing
 
 ## Setup Instructions
 
