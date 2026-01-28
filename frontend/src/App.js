@@ -27,7 +27,10 @@ ChartJS.register(
   LineElement
 );
 
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 
+  (process.env.NODE_ENV === 'production' 
+    ? 'https://chemical-equipment-backend.onrender.com/api'
+    : 'http://localhost:8000/api');
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -311,7 +314,7 @@ function App() {
       <button onClick={handleLogout} className="logout-button">
         Logout
       </button>
-
+      
       {success && <div className="success">{success}</div>}
       {error && <div className="error">{error}</div>}
 
