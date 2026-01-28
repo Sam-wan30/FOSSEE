@@ -5,11 +5,11 @@ services:
     runtime: python
     plan: free
     rootDir: backend
-    buildCommand: pip install -r requirements.txt && python manage.py migrate
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt && python manage.py migrate
     startCommand: gunicorn chemical_equipment.wsgi:application --bind 0.0.0.0:$PORT
     envVars:
       - key: DJANGO_SETTINGS_MODULE
-        value: chemical_equipment.settings_production
+        value: settings_production
       - key: SECRET_KEY
         generateValue: true
       - key: PYTHON_VERSION
