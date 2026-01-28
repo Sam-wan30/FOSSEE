@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
+import { mockApi } from './mockApi';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -29,8 +30,11 @@ ChartJS.register(
 
 const API_BASE_URL = process.env.REACT_APP_API_URL || 
   (process.env.NODE_ENV === 'production' 
-    ? 'https://YOUR_BACKEND_URL.onrender.com/api'  // Replace with your actual backend URL
+    ? null  // Use mock API in production
     : 'http://localhost:8000/api');
+
+// Use mock API if no backend URL
+const USE_MOCK_API = !API_BASE_URL || (process.env.NODE_ENV === 'production');
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -77,6 +81,21 @@ function App() {
     }
     
     try {
+      if (USE_MOCK_API) {
+        // Use mock API
+        const result = await mockApi.login(loginUsername, loginPassword);
+        setAuthCredentials({ username: loginUsername, password: loginPassword });
+        setIsAuthenticated(true);
+        setSuccess(result.data.message);
+        
+        // Load mock data
+        const mockSummary = await mockApi.getSummary();
+        const mockHistory = await mockApi.getHistory();
+        setSummary(mockSummary);
+        setHistory(mockHistory);
+        return;
+      }
+      
       // Test authentication with current credentials using history endpoint
       // (works even when no data is uploaded yet)
       const testApi = axios.create({
@@ -135,6 +154,26 @@ function App() {
     formData.append('file', selectedFile);
 
     try {
+      if (USE_MOCK_API) {
+        // Use mock API
+        const result = await mockApi.uploadFile(selectedFile);
+        setSuccess(result.message);
+        setSummary(result.summary);
+        setCurrentDatasetId(result.dataset.id);
+        
+        // Load mock dataset data
+        const mockDataset = await mockApi.getDataset(result.dataset.id);
+        setDatasetData(mockDataset.data);
+        
+        // Load mock history
+        const mockHistory = await mockApi.getHistory();
+        setHistory(mockHistory);
+        
+        setSelectedFile(null);
+        document.querySelector('input[type="file"]').value = '';
+        return;
+      }
+
       const response = await api.post('/upload/', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
@@ -315,6 +354,13 @@ function App() {
         Logout
       </button>
       
+      {/* Mock Mode Indicator */}
+      {USE_MOCK_API && (
+        <div className="demo-mode-notice">
+          🎭 <strong>Demo Mode</strong> - Showing sample data with mock API. Upload functionality simulated.
+        </div>
+      )}
+
       {success && <div className="success">{success}</div>}
       {error && <div className="error">{error}</div>}
 
