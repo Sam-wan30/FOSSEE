@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.upload-section {
+  text-align: center;
+}
+
+.file-input-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.file-input-wrapper input[type=file] {
+  position: absolute;
+  left: -9999px;
+}
+
+.file-input-label {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #667eea;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.file-input-label:hover {
+  background: #5568d3;
+}
+
+.upload-button {
+  padding: 12px 24px;
+  background: #48bb78;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  transition: background 0.3s;
+}
+
+.upload-button:hover {
+  background: #38a169;
+}
+
+.upload-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.selected-file {
+  margin: 10px 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.error {
+  color: #e53e3e;
+  margin: 10px 0;
+  padding: 10px;
+  background: #fed7d7;
+  border-radius: 5px;
+}
+
+.success {
+  color: #22543d;
+  margin: 10px 0;
+  padding: 10px;
+  background: #c6f6d5;
+  border-radius: 5px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.summary-item {
+  background: #f7fafc;
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 4px solid #667eea;
+}
+
+.summary-item h3 {
+  font-size: 0.9em;
+  color: #718096;
+  margin-bottom: 5px;
+}
+
+.summary-item p {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.chart-container {
+  margin: 20px 0;
+  height: 400px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.data-table th {
+  background: #667eea;
+  color: white;
+  font-weight: 600;
+}
+
+.data-table tr:hover {
+  background: #f7fafc;
+}
+
+.history-section {
+  margin-top: 30px;
+}
+
+.history-item {
+  padding: 15px;
+  background: #f7fafc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-left: 4px solid #667eea;
+}
+
+.history-item:hover {
+  background: #edf2f7;
+}
+
+.history-item h3 {
+  color: #2d3748;
+  margin-bottom: 5px;
+}
+
+.history-item p {
+  color: #718096;
+  font-size: 0.9em;
+}
+
+.auth-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-input {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #cbd5e0;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.auth-button {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.auth-button:hover {
+  background: #5568d3;
+}
+
+.logout-button {
+  padding: 8px 16px;
+  background: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  float: right;
+}
+
+.logout-button:hover {
+  background: #c53030;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #667eea;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.action-button {
+  padding: 8px 16px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.action-button:hover {
+  background: #5568d3;
+}
+
+.action-button.download {
+  background: #48bb78;
+}
+
+.action-button.download:hover {
+  background: #38a169;
+}

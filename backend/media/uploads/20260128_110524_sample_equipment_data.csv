@@ -1,0 +1,26 @@
+Equipment Name,Type,Flowrate,Pressure,Temperature
+Reactor-001,Reactor,150.5,2.5,85.0
+Distillation Column-001,Distillation Column,200.0,1.8,120.5
+Heat Exchanger-001,Heat Exchanger,175.3,3.2,65.0
+Pump-001,Centrifugal Pump,300.0,5.0,25.0
+Compressor-001,Compressor,250.7,8.5,95.0
+Reactor-002,Reactor,180.2,2.8,90.0
+Distillation Column-002,Distillation Column,220.5,2.0,125.0
+Heat Exchanger-002,Heat Exchanger,160.8,3.0,70.0
+Pump-002,Centrifugal Pump,280.0,4.8,30.0
+Compressor-002,Compressor,270.3,9.0,100.0
+Reactor-003,Reactor,165.0,2.6,88.0
+Distillation Column-003,Distillation Column,195.5,1.9,118.0
+Heat Exchanger-003,Heat Exchanger,185.0,3.5,68.0
+Pump-003,Centrifugal Pump,310.0,5.2,28.0
+Compressor-003,Compressor,240.0,8.0,92.0
+Reactor-004,Reactor,170.8,2.7,87.0
+Distillation Column-004,Distillation Column,210.0,1.95,122.0
+Heat Exchanger-004,Heat Exchanger,170.5,3.3,66.0
+Pump-004,Centrifugal Pump,290.0,4.9,27.0
+Compressor-004,Compressor,260.5,8.7,98.0
+Reactor-005,Reactor,155.3,2.4,86.0
+Distillation Column-005,Distillation Column,205.5,1.85,119.0
+Heat Exchanger-005,Heat Exchanger,180.0,3.4,67.0
+Pump-005,Centrifugal Pump,295.0,5.1,26.0
+Compressor-005,Compressor,255.0,8.3,96.0
