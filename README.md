@@ -60,6 +60,73 @@ FOSSEE/
 - Node.js 14 or higher and npm
 - Git
 
+## Quick Start - Running the Application
+
+To run the complete application, you need to open 3 separate terminals and execute the following commands:
+
+### Terminal 1: Backend Server (Django)
+```bash
+# Navigate to backend directory
+cd backend
+
+# Create and activate virtual environment (if not already done)
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run database migrations (first time only)
+python manage.py makemigrations
+python manage.py migrate
+
+# Create superuser (first time only)
+python manage.py createsuperuser
+
+# Start the Django development server
+python manage.py runserver
+```
+
+The backend API will be available at `http://localhost:8000`
+
+### Terminal 2: Web Frontend (React)
+```bash
+# Navigate to frontend directory
+cd frontend
+
+# Install dependencies (first time only)
+npm install
+
+# Start the React development server
+npm start
+```
+
+The web application will be available at `http://localhost:3000`
+
+### Terminal 3: Desktop Application (PyQt5)
+```bash
+# Navigate to desktop directory
+cd desktop
+
+# Create and activate virtual environment (if not already done)
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies (first time only)
+pip install -r requirements.txt
+
+# Run the desktop application
+python main.py
+```
+
+The desktop application will open in a new window.
+
+### Important Notes:
+- **Terminal 1 must be running first** - the desktop and web applications depend on the backend API
+- Use the same superuser credentials for both web and desktop login
+- All three terminals should remain open while using the application
+- The sample CSV file `sample_equipment_data.csv` is available in the root directory for testing
+
 ## Setup Instructions
 
 ### 1. Backend Setup (Django)

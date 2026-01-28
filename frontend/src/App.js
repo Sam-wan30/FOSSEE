@@ -141,7 +141,13 @@ function App() {
       setSuccess('File uploaded successfully!');
       setSummary(response.data.summary);
       setCurrentDatasetId(response.data.dataset.id);
-      loadHistory();
+      
+      // Automatically load the full dataset data and charts
+      await loadDatasetData(response.data.dataset.id);
+      
+      // Load history to show updated list
+      await loadHistory();
+      
       setSelectedFile(null);
       document.querySelector('input[type="file"]').value = '';
     } catch (err) {
@@ -205,32 +211,57 @@ function App() {
 
   if (!isAuthenticated) {
     return (
-      <div className="container">
-        <h1>Chemical Equipment Parameter Visualizer</h1>
-        <div className="card auth-section">
-          <h2>Login Required</h2>
-          <form onSubmit={handleLogin}>
-            <input
-              type="text"
-              placeholder="Username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              className="auth-input"
-              required
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="auth-input"
-              required
-            />
-            <button type="submit" className="auth-button">
-              Login
-            </button>
-          </form>
-          {error && <div className="error">{error}</div>}
+      <div className="login-container">
+        <div className="chemical-background">
+          <div className="floating-elements">
+            <div className="element beaker">🧪</div>
+            <div className="element molecule">⚗️</div>
+            <div className="element test-tube">🧫</div>
+            <div className="element letter-h">H</div>
+            <div className="element letter-n">N</div>
+            <div className="element letter-o">O</div>
+            <div className="element letter-s">S</div>
+            <div className="element letter-p">P</div>
+          </div>
+        </div>
+        <div className="login-content">
+          <div className="login-header">
+            <div className="beaker-icon">⚗️</div>
+            <h1 className="main-title">Chemical Equipment</h1>
+            <h2 className="sub-title">Parameter Visualizer</h2>
+            <p className="description">Monitor and analyze your equipment data</p>
+          </div>
+          <div className="login-form-container">
+            <form onSubmit={handleLogin} className="login-form">
+              <div className="input-group">
+                <span className="input-icon">👤</span>
+                <input
+                  type="text"
+                  placeholder="Enter your username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  className="login-input"
+                  required
+                />
+              </div>
+              <div className="input-group">
+                <span className="input-icon">🔒</span>
+                <input
+                  type="password"
+                  placeholder="Enter your password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="login-input"
+                  required
+                />
+              </div>
+              <button type="submit" className="signin-button">
+                Sign In
+              </button>
+            </form>
+            {error && <div className="error-message">{error}</div>}
+          </div>
+          <p className="secure-text">Secure access to your equipment monitoring dashboard</p>
         </div>
       </div>
     );
