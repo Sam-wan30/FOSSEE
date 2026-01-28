@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/chemical-equipment-visualizer/static/css/main.450fbaab.css",
+    "main.js": "/chemical-equipment-visualizer/static/js/main.eca95b38.js",
+    "index.html": "/chemical-equipment-visualizer/index.html",
+    "main.450fbaab.css.map": "/chemical-equipment-visualizer/static/css/main.450fbaab.css.map",
+    "main.eca95b38.js.map": "/chemical-equipment-visualizer/static/js/main.eca95b38.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.450fbaab.css",
+    "static/js/main.eca95b38.js"
+  ]
+}
