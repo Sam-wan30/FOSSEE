@@ -8,23 +8,13 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Environment-specific settings
-if os.environ.get('DJANGO_SETTINGS_MODULE') == 'settings_production':
-    # Import production settings directly
-    import sys
-    sys.path.insert(0, os.path.dirname(BASE_DIR))
-    from settings_production import *
-else:
-    # Quick-start development settings - unsuitable for production
-    # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-chem-equip-visualizer-dev-key-change-in-production'
 
-    # SECURITY WARNING: keep the secret key used in production secret!
-    SECRET_KEY = 'django-insecure-chem-equip-visualizer-dev-key-change-in-production'
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
-    # SECURITY WARNING: don't run with debug turned on in production!
-    DEBUG = True
-
-    ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
