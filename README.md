@@ -199,7 +199,7 @@ Heat-Exchanger-01,Heat Exchanger,75.2,2.5,160.0
 **Samiksha Wanjari**  
 B.Tech Student, VIT Bhopal  
 GitHub: [Sam-wan30](https://github.com/Sam-wan30)  
-LinkedIn: [your-linkedin-profile]
+LinkedIn: https://www.linkedin.com/in/samikshawanjari30/
 
 ---
 
