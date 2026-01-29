@@ -8,8 +8,6 @@
     pkgs.python311Packages.pandas
     pkgs.python311Packages.reportlab
     pkgs.python311Packages.django-cors-headers
-    pkgs.nodejs_20
-    pkgs.nodePackages.npm
   ];
 
   env = {
