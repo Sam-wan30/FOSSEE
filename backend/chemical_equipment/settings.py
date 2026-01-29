@@ -137,6 +137,19 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "https://*.replit.app",
+    "https://*.replit.dev",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
+
+# Static files configuration for production
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+# Replit specific settings
+if 'REPL_ID' in os.environ:
+    DEBUG = False
+    ALLOWED_HOSTS = ['*']

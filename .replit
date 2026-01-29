@@ -1,0 +1,19 @@
+[deployment]
+run = ["python", "backend/manage.py", "runserver", "0.0.0.0:8000"]
+deploymentTarget = "cloudrun"
+
+[deployment.healthcheck]
+path = "/"
+port = 8000
+
+[deployment.build]
+buildCommand = ["bash", "build.sh"]
+
+[pkg]
+language = "python3"
+
+[interpreter]
+command = ["python3"]
+
+[run]
+command = ["python3", "backend/manage.py", "runserver", "0.0.0.0:8000"]
