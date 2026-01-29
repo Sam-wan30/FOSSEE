@@ -9,11 +9,13 @@ Copy and paste these commands into **3 separate terminal windows**.
 ```bash
 cd /Users/samiksha/FOSSEE/backend
 source venv/bin/activate
+python manage.py migrate
 python manage.py runserver
 ```
 
 **Expected output:**
 ```
+Watching for file changes with StatReloader
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
@@ -26,6 +28,7 @@ Quit the server with CONTROL-C.
 
 ```bash
 cd /Users/samiksha/FOSSEE/frontend
+npm install
 npm start
 ```
 
@@ -47,7 +50,9 @@ You can now view chemical-equipment-visualizer in the browser.
 
 ```bash
 cd /Users/samiksha/FOSSEE/desktop
+python3 -m venv venv
 source venv/bin/activate
+pip install -r requirements.txt
 python main.py
 ```
 
@@ -68,11 +73,9 @@ cd /Users/samiksha/FOSSEE/backend
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-python manage.py makemigrations
 python manage.py migrate
+# Optional: Create superuser for admin access
 python manage.py createsuperuser
-# Follow prompts to create username/password, or use:
-python create_superuser.py
 ```
 
 ### Frontend Setup (Terminal 2):
@@ -99,8 +102,8 @@ pip install -r requirements.txt
 
 **URLs:**
 - Web App: http://localhost:3000
-- API: http://localhost:8000
-- Admin Panel: http://localhost:8000/admin
+- Backend API: http://localhost:8000/api/
+- Admin Panel: http://localhost:8000/admin/
 
 **Sample Data:**
 - File: `/Users/samiksha/FOSSEE/sample_equipment_data.csv`

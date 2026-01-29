@@ -2,6 +2,32 @@
 
 A comprehensive web and desktop application for visualizing and analyzing chemical equipment data from CSV files. Features a modern chemical-themed interface with automatic data analysis, interactive charts, and PDF reporting capabilities.
 
+## 🚀 How to Start (Quick)
+
+**Open 3 terminal windows and run:**
+
+**Terminal 1 (Backend):**
+```bash
+cd /Users/samiksha/FOSSEE/backend && source venv/bin/activate && python manage.py migrate && python manage.py runserver
+```
+
+**Terminal 2 (Frontend):**
+```bash
+cd /Users/samiksha/FOSSEE/frontend && npm install && npm start
+```
+
+**Terminal 3 (Desktop):**
+```bash
+cd /Users/samiksha/FOSSEE/desktop && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt && python main.py
+```
+
+**Access URLs:**
+- 🌐 Web App: http://localhost:3000
+- 🔧 Backend API: http://localhost:8000/api/
+- ⚙️ Admin Panel: http://localhost:8000/admin/
+
+---
+
 ## 🚀 Live Demo
 
 **Web Application**: [Deployed Live Demo on Replit](https://your-replit-url.replit.app) - Full-stack application with real CSV processing and data visualization
@@ -106,7 +132,24 @@ chmod +x setup.sh
 setup.bat
 ```
 
-### 📋 Prerequisites
+### � Quick Terminal Commands (3 Windows)
+
+#### **Terminal 1: Backend** 🐍
+```bash
+cd /Users/samiksha/FOSSEE/backend && source venv/bin/activate && python manage.py migrate && python manage.py runserver
+```
+
+#### **Terminal 2: Frontend** 🌐
+```bash
+cd /Users/samiksha/FOSSEE/frontend && npm install && npm start
+```
+
+#### **Terminal 3: Desktop** 🖥️
+```bash
+cd /Users/samiksha/FOSSEE/desktop && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt && python main.py
+```
+
+### �� Prerequisites
 
 - **Python 3.8+** - [Download Python](https://www.python.org/downloads/)
 - **Node.js 14+ & npm** - [Download Node.js](https://nodejs.org/)
