@@ -1,10 +1,10 @@
 [run]
-command = ["python3", "backend/manage.py", "runserver", "0.0.0.0:8000"]
+command = ["bash", "run-both.sh"]
 
 [deployment]
-run = ["python3", "backend/manage.py", "runserver", "0.0.0.0:8000"]
+run = ["bash", "run-both.sh"]
 deploymentTarget = "cloudrun"
 
 [deployment.healthcheck]
 path = "/"
-port = 8000
+port = 3000
