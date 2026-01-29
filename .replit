@@ -1,15 +1,2 @@
-[deployment]
-run = ["python3", "backend/manage.py", "runserver", "0.0.0.0:8000"]
-
-[deployment.healthcheck]
-path = "/"
-port = 8000
-
-[pkg]
-language = "python3"
-
-[interpreter]
-command = ["python3"]
-
 [run]
 command = ["python3", "backend/manage.py", "runserver", "0.0.0.0:8000"]
