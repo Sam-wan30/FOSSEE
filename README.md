@@ -4,9 +4,9 @@ A comprehensive web and desktop application for visualizing and analyzing chemic
 
 ## 🚀 Live Demo
 
-**Web Application**: [Deployed Live Demo Link](https://your-app-url.com) *(Coming Soon)*
+**Web Application**: [Deployed Live Demo on Replit](https://your-replit-url.replit.app) - Full-stack application with real CSV processing and data visualization
 
-**Desktop Application**: Download executable from [Releases](https://github.com/yourusername/chemical-equipment-visualizer/releases) *(Coming Soon)*
+**Source Code**: [GitHub Repository](https://github.com/Sam-wan30/FOSSEE)
 
 ## 📺 Demo Video
 
@@ -117,60 +117,74 @@ setup.bat
 #### **Terminal 1: Backend Server** 🐍
 ```bash
 # Navigate to backend directory
-cd backend
+cd /Users/samiksha/FOSSEE/backend
 
-# Create and activate virtual environment
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+# Activate virtual environment
+source venv/bin/activate
 
-# Install dependencies
-pip install -r requirements.txt
-
-# Setup database (first time only)
-python manage.py makemigrations
+# Setup database
 python manage.py migrate
-
-# Create admin user (first time only)
-python manage.py createsuperuser
 
 # Start Django server
 python manage.py runserver
 ```
-📍 **Backend API**: `http://localhost:8000`
+📍 **Backend API**: `http://localhost:8000/api/`
+📍 **Admin Panel**: `http://localhost:8000/admin/`
 
 #### **Terminal 2: Web Frontend** 🌐
 ```bash
 # Navigate to frontend directory
-cd frontend
+cd /Users/samiksha/FOSSEE/frontend
 
-# Install dependencies (first time only)
+# Install dependencies
 npm install
 
 # Start React development server
 npm start
 ```
-📍 **Web App**: `http://localhost:3000`
+📍 **Web Frontend**: `http://localhost:3000`
 
-#### **Terminal 3: Desktop Application** 🖱️
+#### **Terminal 3: Desktop Application** 🖥️
 ```bash
 # Navigate to desktop directory
-cd desktop
+cd /Users/samiksha/FOSSEE/desktop
 
 # Create and activate virtual environment
 python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate
 
-# Install dependencies (first time only)
+# Install dependencies
 pip install -r requirements.txt
 
-# Run desktop application
+# Start desktop application
 python main.py
 ```
-📍 **Desktop App**: Opens in new window
+📍 **Desktop App**: Opens automatically
+
+### 🚀 Quick Copy-Paste Commands
+
+#### **Terminal 1 (Backend):**
+```bash
+cd /Users/samiksha/FOSSEE/backend && source venv/bin/activate && python manage.py migrate && python manage.py runserver
+```
+
+#### **Terminal 2 (Frontend):**
+```bash
+cd /Users/samiksha/FOSSEE/frontend && npm install && npm start
+```
+
+#### **Terminal 3 (Desktop):**
+```bash
+cd /Users/samiksha/FOSSEE/desktop && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt && python main.py
+```
 
 ### ⚠️ Important Notes
 - **Start Terminal 1 first** - other apps depend on the backend API
-- Use the **same admin credentials** for both web and desktop login
+- **Backend API**: `http://localhost:8000/api/`
+- **Web Frontend**: `http://localhost:3000`
+- **Admin Panel**: `http://localhost:8000/admin/`
+- **Desktop App**: Opens automatically
+- **Login**: Use any username/password for web app (no auth required for basic usage)
 - Keep **all 3 terminals open** while using the application
 - Use `sample_equipment_data.csv` in the root directory for testing
 
