@@ -55,14 +55,6 @@ python main.py
 
 ---
 
-## 🎥 Demo Video
-
-[![Watch Demo Video](https://img.youtube.com/vi/your-video-id/0.jpg)](https://www.youtube.com/watch?v=your-video-id)
-
-*Click the image above to watch the 2-3 minute demo video covering both web and desktop applications*
-
----
-
 ## 🌐 Live Deployment
 
 **Web Application**: [Deployed Live Demo on Replit](https://12dc32cc-49fc-45af-b903-ef8bfd22ac45-00-2w8o2qigt10hq.sisko.replit.dev/)
