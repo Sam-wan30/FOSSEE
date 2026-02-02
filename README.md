@@ -9,7 +9,7 @@ A comprehensive web and desktop application for visualizing and analyzing chemic
 ## � Submission Requirements
 
 ✅ **README file with setup instructions** - Available below  
-📹 **Short demo video (2-3 minutes)** - [Watch Demo Video](https://drive.google.com/file/d/1H6yLZGfYgDgy-LSbAt7Yh-y36tNZM-q3/view?usp=sharing) *(Coming Soon)*  
+📹 **Short demo video (2-3 minutes)** - [Watch Demo Video](https://drive.google.com/file/d/1H6yLZGfYgDgy-LSbAt7Yh-y36tNZM-q3/view?usp=sharing)
 🌐 **Deployment link for web version** - [Live Demo on Replit](https://12dc32cc-49fc-45af-b903-ef8bfd22ac45-00-2w8o2qigt10hq.sisko.replit.dev/)
 
 ---
