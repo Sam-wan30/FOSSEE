@@ -65,7 +65,7 @@ python main.py
 
 ## 🌐 Live Deployment
 
-**Web Application**: [Deployed Live Demo on Replit](https://your-replit-url.replit.app)
+**Web Application**: [Deployed Live Demo on Replit](https://12dc32cc-49fc-45af-b903-ef8bfd22ac45-00-2w8o2qigt10hq.sisko.replit.dev/)
 
 - Full-stack application with real CSV processing
 - Interactive data visualization
