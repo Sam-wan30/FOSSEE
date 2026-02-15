@@ -1,4 +1,4 @@
-# Chemical Equipment Parameter Visualizer
+# ⚗️🧪Chemical Equipment Parameter Visualizer
 
 A comprehensive web and desktop application for visualizing and analyzing chemical equipment data from CSV files. Features a modern chemical-themed interface with automatic data analysis, interactive charts, and PDF reporting capabilities.
 
