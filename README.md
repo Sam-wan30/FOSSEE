@@ -12,6 +12,8 @@ A comprehensive web and desktop application for visualizing and analyzing chemic
 📹 **Short demo video (2-3 minutes)** - [Watch Demo Video](https://youtube.com/your-video-link) *(Coming Soon)*  
 🌐 **Deployment link for web version** - [Live Demo on Replit](https://12dc32cc-49fc-45af-b903-ef8bfd22ac45-00-2w8o2qigt10hq.sisko.replit.dev/)
 
+**Source Code**: [GitHub Repository](https://github.com/Sam-wan30/Chemical-Equipment-parameter-visualizer)
+
 ---
 
 ## 🚀 Quick Setup Instructions
