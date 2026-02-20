@@ -1,4 +1,4 @@
-# Chemical Equipment Parameter Visualizer
+# ⚗️🧪Chemical Equipment Parameter Visualizer
 
 A comprehensive web and desktop application for visualizing and analyzing chemical equipment data from CSV files. Features a modern chemical-themed interface with automatic data analysis, interactive charts, and PDF reporting capabilities.
 
@@ -9,7 +9,9 @@ A comprehensive web and desktop application for visualizing and analyzing chemic
 ## � Submission Requirements
 
 ✅ **README file with setup instructions** - Available below  
-📹 **Short demo video (2-3 minutes)** - [Watch Demo Video](https://youtube.com/your-video-link) *(Coming Soon)*  
+
+📹 **Short demo video (2-3 minutes)** - [Watch Demo Video](https://drive.google.com/file/d/1H6yLZGfYgDgy-LSbAt7Yh-y36tNZM-q3/view?usp=sharing)
+
 🌐 **Deployment link for web version** - [Live Demo on Replit](https://12dc32cc-49fc-45af-b903-ef8bfd22ac45-00-2w8o2qigt10hq.sisko.replit.dev/)
 
 **Source Code**: [GitHub Repository](https://github.com/Sam-wan30/Chemical-Equipment-parameter-visualizer)
@@ -57,17 +59,9 @@ python main.py
 
 ---
 
-## 🎥 Demo Video
-
-[![Watch Demo Video](https://img.youtube.com/vi/your-video-id/0.jpg)](https://www.youtube.com/watch?v=your-video-id)
-
-*Click the image above to watch the 2-3 minute demo video covering both web and desktop applications*
-
----
-
 ## 🌐 Live Deployment
 
-**Web Application**: [Deployed Live Demo on Replit](https://your-replit-url.replit.app)
+**Web Application**: [Deployed Live Demo on Replit](https://12dc32cc-49fc-45af-b903-ef8bfd22ac45-00-2w8o2qigt10hq.sisko.replit.dev/)
 
 - Full-stack application with real CSV processing
 - Interactive data visualization
@@ -201,7 +195,7 @@ Heat-Exchanger-01,Heat Exchanger,75.2,2.5,160.0
 **Samiksha Wanjari**  
 B.Tech Student, VIT Bhopal  
 GitHub: [Sam-wan30](https://github.com/Sam-wan30)  
-LinkedIn: [your-linkedin-profile]
+LinkedIn: https://www.linkedin.com/in/samikshawanjari30/
 
 ---
 
